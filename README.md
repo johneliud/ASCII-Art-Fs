@@ -138,10 +138,6 @@ This project was made possible alongside:
 
 - [Denil Anyonyi](https://github.com/denilany)
 
-## Acknowledgements
-
-- [Zone01 Kisumu](https://www.zone01kisumu.ke)
-
 ## Contact
 
 Incase of any enquiry, please feel free to reach out to me via the email address: johneliud4@gmail.com
