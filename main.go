@@ -22,7 +22,7 @@ func main() {
 	nonFlagArgs := flag.Args()
 
 	if len(nonFlagArgs) == 0 {
-		fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
+		fmt.Println("Incorrect usage format.\n\nUsage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 		return
 	}
 
@@ -35,12 +35,12 @@ func main() {
 		if strings.HasPrefix(os.Args[1], "--color=") {
 			inputString = nonFlagArgs[0]
 		} else if strings.HasPrefix(os.Args[2], "--color=") {
-			fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
+			fmt.Println("'--color' flag should be used before the input string.\n\nUsage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 			return
 		} else if !strings.Contains(os.Args[1], "--color") && (os.Args[2] != "shadow" &&
 			os.Args[2] != "standard" &&
 			os.Args[2] != "thinkertoy") {
-			fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
+			fmt.Println("Invalid banner flag name.\n\nUsage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 			return
 		} else {
 			inputString = os.Args[1]
@@ -48,7 +48,7 @@ func main() {
 		}
 	case 4:
 		if !strings.HasPrefix(os.Args[1], "--color=") {
-			fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
+			fmt.Println("'--color' flag should be the second argument.\n\nUsage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 		} else if os.Args[3] == "shadow" ||
 			os.Args[3] == "standard" ||
 			os.Args[3] == "thinkertoy" {
@@ -60,7 +60,7 @@ func main() {
 		}
 	case 5:
 		if !strings.HasPrefix(os.Args[1], "--color=") {
-			fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
+			fmt.Println("'--color' flag should be the second argument.\n\nUsage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 			return
 		} else if os.Args[4] != "shadow" && os.Args[4] != "standard" && os.Args[4] != "thinkertoy" {
 			fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
